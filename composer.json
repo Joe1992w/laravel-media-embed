@@ -1,0 +1,25 @@
+{
+  "name": "joe1992w/laravel-media-embed",
+  "type": "library",
+  "description": "Laravel Wrapper for dereuromark/MediaEmbed to generate embed HTML for popular media hosts",
+  "keywords": ["laravel","package development"],
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Joe Ware",
+      "email": "joe_ware@hotmail.co.uk"
+    }
+  ],
+  "autoload":{
+    "psr-4": {
+      "Joe1992w\\LaravelMediaEmbed\\": "src/"
+    }
+  },
+  "config": {
+      "preferred-install": "dist"
+  },
+  "require": {
+    "dereuromark/media-embed": "^0.3.0"
+  }
+}
