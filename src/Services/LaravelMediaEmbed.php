@@ -6,7 +6,7 @@ use MediaEmbed\MediaEmbed;
 
 class LaravelMediaEmbed
 {
-  public function parse($url = null, $whitelist = []) {
+  public function parse($url = null, $whitelist = [], $params = [], $attributes = []) {
 
     $MediaEmbed = new MediaEmbed();
 
@@ -14,6 +14,17 @@ class LaravelMediaEmbed
 
     if ($MediaObject)
     {
+
+      if(is_array($params))
+      {
+        $MediaObject->setParam($params);
+      }
+
+      if(is_array($params))
+      {
+        $MediaObject->setAttribute($attributes);
+      }
+
 
       if (!empty($whitelist))
       {

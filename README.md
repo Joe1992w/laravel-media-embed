@@ -41,6 +41,19 @@ $url = "https://www.youtube.com/watch?v=8eK-5ivYb3o";
 //Optional array of website names, if present any websites not in the array will result in false being returned by the parser
 $whitelist = ['YouTube', 'Vimeo'];
 
+//Optional parameters to be appended to embed
+$params = [
+    'autoplay' => 1,
+    'loop' => 1
+  ];
+
+//Optional attributes for embed container
+$attributes = [
+  'type' => null,
+  'class' => 'iframe-class',
+  'data-html5-parameter' => true
+];
+
 return LaravelMediaEmbed::parse($url, $whitelist);
 // "<iframe src="https://www.youtube.com/embed/8eK-5ivYb3o?wmode=transparent" type="text/html" width="480" height="295" frameborder="0" allowfullscreen></iframe>"
 
@@ -49,6 +62,9 @@ return LaravelMediaEmbed::parse($url);
 
 return LaravelMediaEmbed::parse($url, ['Vimeo']);
 // false
+
+return LaravelMediaEmbed::parse($url, $whitelist, $params, $attributes)
+//<iframe src="https://www.youtube.com/embed/8eK-5ivYb3o?wmode=transparent&amp;autoplay=1&amp;loop=1" type="" width="480" height="295" frameborder="0" allowfullscreen class="iframe-class" data-html5-parameter></iframe>
 ````
 
 ##Supported Hosts
