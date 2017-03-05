@@ -38,7 +38,7 @@ class LaravelMediaEmbed
 
       }
 
-      return $MediaObject->getEmbedCode();
+      return $MediaObject;
 
     }
 
