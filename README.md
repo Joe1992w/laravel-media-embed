@@ -4,12 +4,12 @@ A simple wrapper for dereuromark/MediaEmbed to generate embed HTML for popular m
 
 ## Installation
 ````bash
-composer require joe1992w/laravel-media-embed:dev-master
+composer require joe1992w/laravel-media-embed
 ````
 #### OR
 ````json
 "require": {
-    "joe1992w/laravel-media-embed": "dev-master",
+    "joe1992w/laravel-media-embed": "^1.0",
 },
 ````
 ````bash
